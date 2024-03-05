@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: monospace;
+    margin: 30px 20px;
+    font-size: xx-large;
+}
+
+input,
+textarea {
+    border: 1px solid black;
+}
+
+input,
+textarea,
+button {
+    border-radius: 0.2em;
+    padding: 0.2em 0.5em;
+    display: block;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #333333 !important;
+    color: white;
+}
+
+button:disabled {
+    background-color: #AAAAAA !important;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}

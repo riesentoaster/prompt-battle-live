@@ -1,0 +1,5 @@
+.outer,
+.outer * {
+    max-height: 50vh;
+    object-fit: contain;
+}
