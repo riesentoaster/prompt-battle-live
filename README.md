@@ -21,7 +21,7 @@ All information is updated live between the components, which means that the aud
 - `npm run build` — Produces a production build
 - `npm run start` — Runs the system (requires a previous build)
 
-## Docker
+## Docker
 
 The system can be built and run using the provided Dockerfile.
 - To build the image, run `docker build -t "prompt-battle-live" .`
