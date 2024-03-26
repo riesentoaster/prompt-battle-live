@@ -4,7 +4,7 @@ import { createServer } from 'http'
 import { Settings, Prompt, defaultSettings, GameStage, UserNameUpdate, ImageSelectUpdate } from './interface'
 import OpenAI from 'openai'
 import 'dotenv/config'
-import { writeFileSync } from 'fs'
+import { writeFileSync, existsSync, mkdirSync } from 'fs'
 import cors from 'cors'
 import path from 'path'
 
@@ -129,6 +129,12 @@ export const generateImage = async ( prompt: string ): Promise<string[]> => {
     response_format: 'b64_json',
     model: 'dall-e-2'
   } )
+
+  // Create the directory for generated images if it doesn't exist
+  if (!existsSync('./images')) {
+    mkdirSync('./images', { recursive: true });
+  }
+
   writeFileSync( `./images/${prompt}`, JSON.stringify( apiResponse ) )
   // await new Promise( f => setTimeout( f, 5000 ) )
   // const apiResponse = JSON.parse( readFileSync( `./images/${prompt}`, 'utf8' ) )
