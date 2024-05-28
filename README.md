@@ -32,7 +32,8 @@ The system can be built and run using the provided Dockerfile.
 
 The following settings can be adjusted using environment variables:
 - `OPENAI_API_KEY`: the OpenAI access key
-- `IMAGE_COUNT`: The number of images per user, defaults to 2 — keep in mind the rate limits of OpenAI
+- `MODEL_NAME`: the [OpenAI image generation model](https://platform.openai.com/docs/guides/images) used, e.g. `dall-e-2` (default) or `dall-e-3`. To use `dall-e-3`, your OpenAI account needs to be in at least Tier 1, i.e. [$5 paid](https://platform.openai.com/docs/guides/rate-limits?context=tier-free), due to rate limits.
+- `IMAGE_COUNT`: The number of images per user. Defaults to 2 for dall-e-2, not supported by dall-e-3 (always set to 1). Keep in mind the rate limits of OpenAI.
 
 These can either be set in your environment manually, in the `docker run` command (see above), or in a `.env` file — copy the `.env.example` to `.env` and fill out the information for this.
 
