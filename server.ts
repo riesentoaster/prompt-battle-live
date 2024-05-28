@@ -10,7 +10,7 @@ import path from 'path'
 
 const PORT = 3000
 // select dall-e-3 by default
-const MODEL_NAME = process.env.MODEL_NAME ? process.env.MODEL_NAME : "dall-e-3"
+const MODEL_NAME = process.env.MODEL_NAME ? process.env.MODEL_NAME : "dall-e-2"
 // only dall-e-2 supports returning multiple images at once
 const IMAGE_COUNT = MODEL_NAME === "dall-e-2" ? parseInt( process.env.IMAGE_COUNT || '2' ) : 1 
 
